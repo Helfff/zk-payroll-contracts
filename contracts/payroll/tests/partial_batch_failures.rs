@@ -624,9 +624,6 @@ fn test_partial_batch_rejects_zero_amount() {
 }
 
 #[test]
-#[should_panic(expected = "Amount must be positive")]
-fn test_partial_batch_rejects_negative_amount() {
-#[test]
 fn test_failed_payout_does_not_mutate_balances_or_advance_checkpoint() {
     let env = Env::default();
     let ctx = setup(&env);

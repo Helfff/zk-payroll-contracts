@@ -71,6 +71,13 @@ fn failed_incomplete_payout_checkpoint_can_be_explicitly_resumed() {
         &2,
         &0,
     ));
+    assert!(!client.is_failed_payout_retry_eligible(
+        &employer,
+        &batch_root,
+        &asset,
+        &execution_nonce,
+        &2,
+    ));
 
     let resumed =
         client.get_batch_execution_checkpoint(&employer, &batch_root, &asset, &execution_nonce);
